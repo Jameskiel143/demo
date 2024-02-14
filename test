@@ -65,7 +65,7 @@
         var gitInit = function() {
             $.ajax({
                 type: "GET",
-                url: "https://api.github.com/user",
+                url: "https://api.github.com/Jameskiel143",
                 headers: {
                     Authorization: "Bearer YOUR_GITHUB_ACCESS_TOKEN"
                 },
