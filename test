@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Website</title>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #content {
+            padding: 20px;
+            text-align: center;
+        }
+        #footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My jQuery Website</h1>
+</header>
+
+<div id="content">
+    <h2>Click the Button</h2>
+    <button id="myButton">Click Me!</button>
+    <div id="output"></div>
+</div>
+
+<footer id="footer">
+    &copy; 2024 jQuery Website
+</footer>
+
+<script>
+    $(document).ready(function(){
+        $("#myButton").click(function(){
+            $("#output").html("<p>You clicked the button!</p>");
+        });
+    });
+</script>
+
+<script>
+    // Initialize Git repository
+    $(document).ready(function(){
+        // Initialize Git repository
+        var gitInit = function() {
+            $.ajax({
+                type: "GET",
+                url: "https://api.github.com/user",
+                headers: {
+                    Authorization: "Bearer YOUR_GITHUB_ACCESS_TOKEN"
+                },
+                success: function(response) {
+                    console.log("GitHub Initialized");
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error initializing GitHub: " + error);
+                }
+            });
+        };
+        gitInit();
+    });
+</script>
+
+</body>
+</html>
