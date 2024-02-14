@@ -57,29 +57,5 @@
         });
     });
 </script>
-
-<script>
-    // Initialize Git repository
-    $(document).ready(function(){
-        // Initialize Git repository
-        var gitInit = function() {
-            $.ajax({
-                type: "GET",
-                url: "https://api.github.com/Jameskiel143",
-                headers: {
-                    Authorization: "Bearer YOUR_GITHUB_ACCESS_TOKEN"
-                },
-                success: function(response) {
-                    console.log("GitHub Initialized");
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error initializing GitHub: " + error);
-                }
-            });
-        };
-        gitInit();
-    });
-</script>
-
 </body>
 </html>
